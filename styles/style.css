@@ -1,0 +1,262 @@
+:root {
+  --textHover: #ffffff;
+  --backgroundColor: beige;
+  --navBackground: rgb(119, 119, 119);
+  --textColor: rgb(153, 151, 151);
+  --rainbow2: red;
+  --rainbow1: brown;
+  --cardColor: antiquewhite;
+  --backgroundColor: aliceblue;
+  --sidebarBackgroundColor: rgba(0, 217, 255, 0.336);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--backgroundColor);
+}
+
+header {
+  height: 30vh;
+  padding: 20px;
+  background-image: url(../images/Basantapur_Durbar_Square_Kaal_Bhairav.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  image-rendering: auto;
+  color: var(--textColor);
+  align-items: end;
+  color: var(--textColor);
+  -webkit-text-stroke: 1px #ffffffd5;
+}
+
+header h1 {
+  font-weight: 900;
+  font-size: 3.2rem;
+  letter-spacing: -2px;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+nav ul {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  justify-content: right;
+  gap: 50px;
+  align-items: center;
+  list-style: none;
+  text-transform: capitalize;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: var(--textColor);
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  padding: 0 2px;
+  transition: 400ms ease-in-out;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  transition: 400ms ease-in-out;
+  height: 3px;
+  background: var(--textColor);
+}
+
+a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--textHover);
+  border-radius: 0px 2px 2px 0px;
+}
+
+nav ul li a:hover {
+  color: var(--textHover);
+}
+
+main {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.info-about-basantapur {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: var(--cardColor);
+  width: 70vw;
+}
+.card-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.info-about-basantapur {
+  font-family: sans-serif;
+}
+
+aside {
+  background-color: var(--sidebarBackgroundColor);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 55px;
+  width: 25vw;
+  height: 88vh;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+aside ul {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-direction: column;
+  margin-left: 20px;
+  list-style: circle;
+}
+
+aside ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-left: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+aside ul li a::after {
+  display: none;
+}
+
+strong {
+  font-size: 1.6rem;
+}
+
+footer {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.284);
+  color: #333;
+  text-align: center;
+  padding: 1vmin;
+  font-size: 0.9rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+}
+
+table {
+  width: 96vw;
+  padding: 10px;
+  color: var(--textColor);
+  text-align: left;
+  vertical-align: middle;
+  background-color: var(--cardColor);
+  box-shadow: 1px 1px 5px 0.2px black;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+table th,
+td {
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.451), -1px -1px 1px 0 rgba(0, 0, 0, 0.25);
+  border-collapse: collapse;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+table th {
+  font-size: 1.6rem;
+}
+table tr td img {
+  aspect-ratio: 16/9;
+  width: 1080px;
+}
+.contact-card-wrapper {
+  height: 75vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-card {
+  background-color: var(--cardColor);
+  width: 500px;
+  height: 600px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-card a {
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.contact-card a:hover{
+    background-color: rgb(1, 1, 156);
+}
+
+.contact-card a::after{
+    display: none;
+}
