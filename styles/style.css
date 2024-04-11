@@ -235,6 +235,7 @@ table tr td img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5vh;
 }
 
 .contact-card {
